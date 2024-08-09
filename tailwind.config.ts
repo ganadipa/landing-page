@@ -22,6 +22,8 @@ const config = {
       colors: {
         "white-default": "#FAF9F5",
         gold: "#D6B66B",
+        "dark-green": "#0B7373",
+        "darker-green": "#004040",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

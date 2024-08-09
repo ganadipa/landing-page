@@ -4,7 +4,7 @@ import React from "react";
 export default function Logo() {
   return (
     <Image
-      src={"/logo-white.png"}
+      src={"/logo-color.png"}
       width={430}
       height={82}
       alt="Zamrood by Pandooin"

@@ -42,7 +42,7 @@ export default function Nav() {
           active={pathname === navItem.href}
           className={
             navItem.label === "Need Assistance?"
-              ? "px-6 py-2.5 border-2 border-white-default rounded-full hover:bg-gold hover:border-gold transition-all duration-300"
+              ? "px-6 py-2.5 border-2 border-darker-green rounded-full hover:bg-darker-green hover:border-darker-green hover:text-white-default transition-all duration-300"
               : ""
           }
         />
@@ -66,9 +66,9 @@ function NavElement({
     <Link
       href={href}
       className={cn(
-        `bg-transparent text-white-default font-albert-sans px-6 py-2.5 text-base font-bold hover:border-b-2 hover:border-b-white-default `,
+        `bg-transparent text-dark-green font-albert-sans px-6 py-2.5 text-base font-bold hover:border-b-2 hover:border-b-darker-green `,
         {
-          "border-b-2 border-b-white-default": active,
+          "border-b-2 border-b-darker-green": active,
         },
         className
       )}

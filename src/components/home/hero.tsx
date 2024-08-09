@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -10,11 +11,11 @@ export default function Hero() {
         width={1440}
         height={810}
         alt="Zamrood by Pandooin"
-        className="max-h-screen h-[810px] min-w-full object-cover absolute top-0 left-0 -z-10"
+        className="h-screen w-full object-cover -z-50"
       />
       <div
         id="text-hero"
-        className="z-10 max-w-6xl w-full flex flex-col gap-6 mt-36"
+        className="absolute z-0 max-w-6xl w-full flex flex-col gap-6 mt-64"
       >
         <div id="text-hero-wrapper" className="">
           <h1 className="text-gold font-thesignature text-9xl mb-[-40px]">
@@ -28,9 +29,12 @@ export default function Hero() {
           Experience the finest that Indonesia has to offer with our curated
           selection of premium trips, ensuring comfort every step of the way
         </p>
-        <Button className="self-start text-base bg-transparent border-2 border-white rounded-full px-6 py-6 hover:bg-gold hover:border-gold">
+        <Link
+          href="/#destination"
+          className="self-start text-base text-white-default bg-transparent border-2 border-white rounded-full px-6 py-2.5 hover:bg-gold hover:border-gold transition-colors duration-300 font-bold"
+        >
           Take me there
-        </Button>
+        </Link>
       </div>
     </section>
   );
