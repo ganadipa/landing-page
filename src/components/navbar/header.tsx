@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./logo";
 import Nav from "./nav";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -10,9 +11,11 @@ export default function Header() {
     >
       <div
         id="logo-nav-wrapper"
-        className="w-full flex items-center justify-between max-w-7xl px-4 mx-auto"
+        className="w-full flex items-center justify-between max-w-6xl px-4 mx-auto"
       >
-        <Logo />
+        <Link href={"www.zamrood.com"}>
+          <Logo />
+        </Link>
         <Nav />
       </div>
     </header>

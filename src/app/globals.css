@@ -66,4 +66,12 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @font-face {
+    font-family: "Thesignature";
+    src: url("/fonts/Thesignature.ttf") format("truetype"),
+      url("/fonts/Thesignature.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
 }

@@ -79,6 +79,8 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         "albert-sans": ["var(--font-albert-sans)", ...fontFamily.sans],
+        thesignature: ["Thesignature", "sans-serif"],
+        unbounded: ["var(--font-unbounded)", ...fontFamily.sans],
       },
     },
   },

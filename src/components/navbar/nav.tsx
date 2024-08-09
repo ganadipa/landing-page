@@ -42,7 +42,7 @@ export default function Nav() {
           active={pathname === navItem.href}
           className={
             navItem.label === "Need Assistance?"
-              ? "px-6 py-2.5 border-2 border-white-default rounded-full "
+              ? "px-6 py-2.5 border-2 border-white-default rounded-full hover:bg-gold hover:border-gold transition-all duration-300"
               : ""
           }
         />

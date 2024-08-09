@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Inter as FontSans, Albert_Sans as AlbertSans } from "next/font/google";
+import {
+  Inter as FontSans,
+  Albert_Sans as AlbertSans,
+  Unbounded,
+} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/navbar/header";
@@ -12,6 +16,11 @@ const fontSans = FontSans({
 const albertSans = AlbertSans({
   subsets: ["latin"],
   variable: "--font-albert-sans",
+});
+
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  variable: "--font-unbounded",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +37,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-green-300 font-sans antialiased",
+          "min-h-screen bg-green-300 font-albert-sans antialiased relative",
           fontSans.variable,
-          albertSans.variable
+          albertSans.variable,
+          unbounded.variable
         )}
       >
         <Header />
