@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter as FontSans, Albert_Sans as AlbertSans } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import Header from "@/components/navbar/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const albertSans = AlbertSans({
+  subsets: ["latin"],
+  variable: "--font-albert-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-green-300 font-sans antialiased",
+          fontSans.variable,
+          albertSans.variable
+        )}
+      >
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }
