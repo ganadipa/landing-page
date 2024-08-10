@@ -4,15 +4,7 @@ import { ImageSlideshow } from "../images-slideshow";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "../ui/button";
-
-const getDaysAndNightsText = (days: number) => {
-  if (days > 1) {
-    const nights = days - 1;
-    return days + ` DAYS AND ${nights} ${nights > 1 ? "NIGHTS" : "NIGHT"}`;
-  } else {
-    return days + " DAY";
-  }
-};
+import { getDaysAndNightsText } from "./shared";
 
 export default function ItineraryWithDescription({
   itinerary,

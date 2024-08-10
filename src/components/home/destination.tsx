@@ -1,21 +1,21 @@
-import { Itinerary } from "@/lib/types";
 import Link from "next/link";
 import React from "react";
-import { Button } from "../ui/button";
 import { ChevronRight } from "lucide-react";
-import ItineraryWithDescription from "./itinerary-card";
+import ItineraryWithDescription from "./itinerary-with-description";
+import ItineraryShort from "./itinerary-short";
+import { Itinerary } from "@/lib/types";
 
 export default async function Destination() {
   const resp = await fetch(
     "https://pandooin.com/api/zamrood/itinerary?highlight=true"
   );
   const data = await resp.json();
-  const itineraries: Itinerary[] = data.data;
+  const itineraries: Itinerary[] = [...data.data, ...data.data, ...data.data];
 
-  const EXPECT_NUM_EXTEND = 3;
+  const EXPECT_NUM_EXTEND = 1;
   const NUM_EXTEND = Math.min(EXPECT_NUM_EXTEND, itineraries.length);
 
-  const EXPECT_NUM_REST = 4;
+  const EXPECT_NUM_REST = 3;
   const NUM_REST = Math.min(EXPECT_NUM_REST, itineraries.length - NUM_EXTEND);
 
   return (
@@ -49,6 +49,21 @@ export default async function Destination() {
       </div>
 
       {/* Rest Iteneraries */}
+      <div className="w-full overflow-x-auto">
+        <div className="min-w-max flex justify-center">
+          <div id="short-itineraries" className="flex gap-4">
+            {itineraries
+              .slice(NUM_EXTEND, NUM_EXTEND + NUM_REST)
+              .map((itinerary, index) => (
+                <ItineraryShort
+                  key={index}
+                  itinerary={itinerary}
+                  index={index}
+                />
+              ))}
+          </div>
+        </div>
+      </div>
 
       {/* Explore More */}
       <Link
