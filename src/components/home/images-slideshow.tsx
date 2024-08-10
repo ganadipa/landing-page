@@ -14,6 +14,7 @@ export const ImageSlideshow = ({
 }: ImageSlideshowProps) => {
   const [currentImage, setCurrentImage] = useState(0);
 
+  // Change image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);

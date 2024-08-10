@@ -8,6 +8,7 @@ export default function DiscoverTailoredExperiences() {
       id="discover-tailored-experiences"
       className="flex max-md:flex-col justify-center items-center max-w-6xl w-4/5 mx-auto "
     >
+      {/* Image */}
       <div className="md:w-1/2 w-full">
         <Image
           src={"/discover-tailored-experiences.png"}
@@ -17,6 +18,8 @@ export default function DiscoverTailoredExperiences() {
           className="w-64 mx-auto"
         />
       </div>
+
+      {/* Text */}
       <div className="md:w-1/2 flex flex-col gap-8 max-md:text-center">
         <h2 className="text-darker-green text-2xl lg:text-3xl font-bold font-unbounded ">
           Discover Tailored Experiences{" "}

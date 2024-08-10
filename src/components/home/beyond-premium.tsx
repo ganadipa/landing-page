@@ -25,6 +25,7 @@ const items = [
 export default function BeyondPremium() {
   return (
     <section id="beyond-premium" className="max-w-6xl m-12 mx-auto ">
+      {/* Title */}
       <div id="beyond-premium-head" className="text-center mb-6">
         <h1 className="font-thesignature text-5xl lg:text-7xl text-dark-green">
           Beyond Premium
@@ -33,6 +34,8 @@ export default function BeyondPremium() {
           Elevate your experience
         </h3>
       </div>
+
+      {/* Body */}
       <div
         id="beyond-premium-body"
         className="flex max-lg:flex-col max-lg:items-center gap-8 max-md:px-8"
@@ -69,6 +72,7 @@ function Element({
         className="w-36 aspect-square"
       />
 
+      {/* Text */}
       <div className="flex flex-col items-center max-w-96">
         <h2 className="uppercase text-dark-green text-xl mb-2">{title}</h2>
         <p className="text-center max-md:text-sm">{description}</p>

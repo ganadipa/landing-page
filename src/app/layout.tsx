@@ -37,6 +37,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/**
+       * Body will have a maximum width of 2000px
+       * and will be centered horizontally
+       *
+       * The font family is set to Albert Sans, with the following is ready to be used:
+       * - font-albert-sans
+       * - font-sans
+       * - font-unbounded
+       */}
       <body
         className={cn(
           "relative min-h-screen bg-white-default font-albert-sans antialiased w-full max-w-[2000px] mx-auto",
@@ -45,9 +54,12 @@ export default function RootLayout({
           unbounded.variable
         )}
       >
+        {/** All pages will have a navbar */}
         <Header />
 
         {children}
+
+        {/** All pages will have a footer */}
         <Footer />
       </body>
     </html>

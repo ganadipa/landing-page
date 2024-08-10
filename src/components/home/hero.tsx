@@ -9,6 +9,7 @@ export default function Hero() {
       className="flex justify-center max-h-screen h-[1000px] relative"
       id="hero"
     >
+      {/* Image Background*/}
       <Image
         src={"/hero.png"}
         width={1440}
@@ -16,6 +17,8 @@ export default function Hero() {
         alt="Zamrood by Pandooin"
         className="h-[1000px] max-h-screen w-full object-cover -z-50"
       />
+
+      {/* Floating Text */}
       <div
         id="text-hero"
         className="absolute z-0 max-w-6xl w-full flex flex-col gap-6 bottom-1/3 px-12"

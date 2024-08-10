@@ -20,6 +20,7 @@ export default function LuxuryFootages() {
 
   return (
     <section id="luxury-footages" className="bg-gold w-full">
+      {/* The Lightbox */}
       <Lightbox
         open={index >= 0}
         plugins={[Zoom, Thumbnails, Fullscreen]}
@@ -31,13 +32,18 @@ export default function LuxuryFootages() {
         className=""
         index={index}
       />
+
+      {/* Desktop Contents */}
       <div
         id="luxury-contents"
         className="w-full max-w-6xl p-12 mx-auto max-lg:hidden"
       >
+        {/* Title */}
         <h2 className="font-thesignature text-8xl text-darker-green my-12">
           Luxury Footages
         </h2>
+
+        {/* Grid of Images */}
         <div className="grid grid-cols-3 gap-6 auto-rows-min">
           {new Array(6).fill("0").map((_, index) => (
             <React.Fragment key={index}>
@@ -62,13 +68,18 @@ export default function LuxuryFootages() {
           ))}
         </div>
       </div>
+
+      {/* Mobile Contents */}
       <div
         id="luxury-contents"
         className="w-full max-w-6xl p-6 mx-auto lg:hidden"
       >
+        {/* Title */}
         <h2 className="font-thesignature text-6xl text-darker-green my-12">
           Luxury Footages
         </h2>
+
+        {/* Slideshow */}
         <ImageSlideshow images={images} onImageClick={setIndex} />
       </div>
     </section>

@@ -21,6 +21,7 @@ export default async function Articles() {
     data: TArticles[];
   } = await response.json();
 
+  // If the API returns an error, display the error message
   if (!data.success) {
     return (
       <section className="w-full max-w-6xl mx-auto p-12">
@@ -36,9 +37,10 @@ export default async function Articles() {
   }
 
   const articles: TArticles[] = data.data;
-
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-6">
+
+      {/* Title */}
       <h2 className="font-bold font-unbounded text-dark-green text-2xl lg:text-4xl mb-2">
         Articles
       </h2>
@@ -54,6 +56,7 @@ export default async function Articles() {
               "https://pandooin.com/blog/article/best-places-dive-indonesia?utm_source=landing_page&utm_medium=website&utm_campaign=zamrood"
             }
           >
+            {/* Image */}
             <Image
               src={articles[0].featured_image}
               width={1440}
@@ -61,6 +64,8 @@ export default async function Articles() {
               alt={articles[0].featured_image_caption}
               className=" w-full lg:h-full object-cover -z-50  grayscale hover:grayscale-0 transition-all ease-in-out duration-300 aspect-video"
             />
+
+            {/* Caption */}
             <div className="bg-dark-green w-full p-6 space-y-2 lg:absolute bottom-0">
               <h3 className="text-white-default font-bold line-clamp-2">
                 {articles[0].title}
@@ -69,6 +74,7 @@ export default async function Articles() {
           </Link>
         </div>
 
+        {/* Second Image */}
         <div className="w-full h-full overflow-hidden relative">
           <Link
             href={
@@ -89,6 +95,8 @@ export default async function Articles() {
             </div>
           </Link>
         </div>
+
+        {/* Third Image */}
         <div className="w-full  overflow-hidden relative">
           <Link
             href={
@@ -109,6 +117,8 @@ export default async function Articles() {
             </div>
           </Link>
         </div>
+
+        {/* Fourth Image */}
         <div className="w-full h-full overflow-hidden relative">
           <Link
             href={
@@ -129,6 +139,8 @@ export default async function Articles() {
             </div>
           </Link>
         </div>
+
+        {/* Fifth Image */}
         <div className="w-full h-full overflow-hidden relative">
           <Link
             href={
