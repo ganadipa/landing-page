@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header
       id="navbar"
-      className="fixed top-0 z-50 w-full flex items-center py-6 justify-center bg-white-default overflow-hidden"
+      className="sticky top-0 z-50 w-full flex items-center py-6 justify-center bg-white-default mx-auto"
     >
       <div
         id="logo-nav-wrapper"

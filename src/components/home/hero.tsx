@@ -1,16 +1,20 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import Header from "../navbar/header";
 
 export default function Hero() {
   return (
-    <section className="flex justify-center h-screen relative" id="hero">
+    <section
+      className="flex justify-center max-h-screen h-[1000px] relative"
+      id="hero"
+    >
       <Image
         src={"/hero.png"}
         width={1440}
         height={810}
         alt="Zamrood by Pandooin"
-        className="h-screen w-full object-cover -z-50"
+        className="h-[1000px] max-h-screen w-full object-cover -z-50"
       />
       <div
         id="text-hero"

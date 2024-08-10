@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import Articles from "@/components/home/articles";
 import BeyondPremium from "@/components/home/beyond-premium";
 import DiscoverTailoredExperiences from "@/components/home/discover-tailored-experiences";
@@ -28,8 +27,10 @@ export default function Home() {
         className="w-full max-w-6xl mx-auto my-12"
       />
 
+      {/* Section with title Luxury Footages */}
       <LuxuryFootages />
 
+      {/* Pandooin.com */}
       <PandooinDotCom />
 
       {/* Articles Section */}

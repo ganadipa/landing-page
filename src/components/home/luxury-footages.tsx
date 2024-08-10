@@ -33,7 +33,7 @@ export default function LuxuryFootages() {
       />
       <div
         id="luxury-contents"
-        className="w-full max-w-6xl p-6 mx-auto max-lg:hidden"
+        className="w-full max-w-6xl p-12 mx-auto max-lg:hidden"
       >
         <h2 className="font-thesignature text-8xl text-darker-green my-12">
           Luxury Footages

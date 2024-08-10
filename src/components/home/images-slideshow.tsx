@@ -27,7 +27,7 @@ export const ImageSlideshow = ({
         <div
           key={index}
           className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out ${
-            index === currentImage ? "opacity-100 z-50" : "opacity-0"
+            index === currentImage ? "opacity-100 z-10" : "opacity-0"
           }`}
         >
           <Image

@@ -7,9 +7,9 @@ export default function Footer() {
     <footer id="footer" className="mt-12 bg-dark-green w-full">
       <div
         id="footer-wrapper"
-        className="p-6 w-full max-w-6xl flex flex-row justify-between items-center mx-auto"
+        className="p-6 w-full max-w-6xl flex max-md:flex-col justify-between items-center mx-auto max-md:gap-8"
       >
-        <span className="text-white-default text-base">
+        <span className="text-white-default text-sm lg:text-base">
           © 2023 Zamrood by PT Teknologi Pandu Wisata
         </span>
 

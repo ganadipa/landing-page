@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-white-default font-albert-sans antialiased relative",
+          "relative min-h-screen bg-white-default font-albert-sans antialiased w-full max-w-[2000px] mx-auto",
           fontSans.variable,
           albertSans.variable,
           unbounded.variable
