@@ -75,7 +75,9 @@ function Element({
       {/* Text */}
       <div className="flex flex-col items-center max-w-96">
         <h2 className="uppercase text-dark-green text-xl mb-2">{title}</h2>
-        <p className="text-center max-md:text-sm">{description}</p>
+        <p className="text-center max-md:text-sm text-darker-green ">
+          {description}
+        </p>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import {
 } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { ImageSlideshow } from "./images-slideshow";
+import { ImageSlideshow } from "../images-slideshow";
 
 export default function LuxuryFootages() {
   const [index, setIndex] = useState(-1);
@@ -80,7 +80,11 @@ export default function LuxuryFootages() {
         </h2>
 
         {/* Slideshow */}
-        <ImageSlideshow images={images} onImageClick={setIndex} />
+        <ImageSlideshow
+          images={images}
+          onImageClick={setIndex}
+          className="aspect-square"
+        />
       </div>
     </section>
   );

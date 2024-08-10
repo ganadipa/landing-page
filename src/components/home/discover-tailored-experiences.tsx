@@ -20,8 +20,8 @@ export default function DiscoverTailoredExperiences() {
       </div>
 
       {/* Text */}
-      <div className="md:w-1/2 flex flex-col gap-8 max-md:text-center">
-        <h2 className="text-darker-green text-2xl lg:text-3xl font-bold font-unbounded ">
+      <div className="md:w-1/2 flex flex-col gap-8 max-md:text-center text-darker-green">
+        <h2 className=" text-2xl lg:text-3xl font-bold font-unbounded ">
           Discover Tailored Experiences{" "}
         </h2>
         <p className="text-base lg:text-lg">

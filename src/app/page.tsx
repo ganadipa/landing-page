@@ -1,5 +1,6 @@
 import Articles from "@/components/home/articles";
 import BeyondPremium from "@/components/home/beyond-premium";
+import Destination from "@/components/home/destination";
 import DiscoverTailoredExperiences from "@/components/home/discover-tailored-experiences";
 import Hero from "@/components/home/hero";
 import LuxuryFootages from "@/components/home/luxury-footages";
@@ -26,6 +27,9 @@ export default function Home() {
         alt="Separator"
         className="w-full max-w-6xl mx-auto my-12"
       />
+
+      {/* Destination */}
+      <Destination />
 
       {/* Section with title Luxury Footages */}
       <LuxuryFootages />

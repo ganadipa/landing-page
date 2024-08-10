@@ -1,16 +1,19 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type ImageSlideshowProps = {
   images: string[];
   onImageClick?: (index: number) => void;
+  className?: string;
 };
 
 export const ImageSlideshow = ({
   images,
   onImageClick,
+  className,
 }: ImageSlideshowProps) => {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -23,7 +26,10 @@ export const ImageSlideshow = ({
   }, [images.length]);
 
   return (
-    <div className="relative w-full aspect-square overflow-hidden" content="">
+    <div
+      className={cn("relative w-full overflow-hidden", className)}
+      content=""
+    >
       {images.map((src, index) => (
         <div
           key={index}
@@ -36,7 +42,9 @@ export const ImageSlideshow = ({
             alt={`Luxury ${index + 1}`}
             width={400}
             height={400}
-            className="w-full h-full cursor-pointer"
+            className={cn("w-full h-full object-cover", {
+              "cursor-pointer": Boolean(onImageClick),
+            })}
             onClick={() => onImageClick?.(index)}
           />
         </div>
