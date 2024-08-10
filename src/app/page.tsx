@@ -1,6 +1,10 @@
+import Footer from "@/components/footer";
+import Articles from "@/components/home/articles";
 import BeyondPremium from "@/components/home/beyond-premium";
 import DiscoverTailoredExperiences from "@/components/home/discover-tailored-experiences";
 import Hero from "@/components/home/hero";
+import LuxuryFootages from "@/components/home/luxury-footages";
+import PandooinDotCom from "@/components/home/pandooin-dot-com";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,11 +22,18 @@ export default function Home() {
       {/* Separator with color */}
       <Image
         src="/separator-color.png"
-        width={2000}
-        height={200}
+        width={400}
+        height={400}
         alt="Separator"
         className="w-full max-w-6xl mx-auto my-12"
       />
+
+      <LuxuryFootages />
+
+      <PandooinDotCom />
+
+      {/* Articles Section */}
+      <Articles />
     </main>
   );
 }

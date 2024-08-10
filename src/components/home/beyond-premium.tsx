@@ -26,14 +26,17 @@ export default function BeyondPremium() {
   return (
     <section id="beyond-premium" className="max-w-6xl m-12 mx-auto ">
       <div id="beyond-premium-head" className="text-center mb-6">
-        <h1 className="font-thesignature text-7xl text-dark-green">
+        <h1 className="font-thesignature text-5xl lg:text-7xl text-dark-green">
           Beyond Premium
         </h1>
-        <h3 className="uppercase font-unbounded text-darker-green font-bold text-3xl">
+        <h3 className="uppercase font-unbounded text-darker-green font-bold text-xl lg:text-3xl">
           Elevate your experience
         </h3>
       </div>
-      <div id="beyond-premium-body" className="flex gap-8">
+      <div
+        id="beyond-premium-body"
+        className="flex max-lg:flex-col max-lg:items-center gap-8 max-md:px-8"
+      >
         {items.map((item, index) => (
           <Element
             key={index}
@@ -57,7 +60,7 @@ function Element({
   description: string;
 }) {
   return (
-    <div className="flex flex-col gap-6 items-center w-1/3">
+    <div className="flex flex-col gap-6 items-center lg:w-1/3 w-full">
       <Image
         src={img}
         width={400}
@@ -66,9 +69,9 @@ function Element({
         className="w-36 aspect-square"
       />
 
-      <div className="flex flex-col items-center">
-        <h4 className="uppercase text-dark-green text-xl mb-2">{title}</h4>
-        <p className="text-center">{description}</p>
+      <div className="flex flex-col items-center max-w-96">
+        <h2 className="uppercase text-dark-green text-xl mb-2">{title}</h2>
+        <p className="text-center max-md:text-sm">{description}</p>
       </div>
     </div>
   );
