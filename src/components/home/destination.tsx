@@ -10,11 +10,15 @@ export default async function Destination() {
     "https://pandooin.com/api/zamrood/itinerary?highlight=true"
   );
   const data = await resp.json();
+
+  // For development purpose, we extend the itineraries
   const itineraries: Itinerary[] = [...data.data, ...data.data, ...data.data];
 
-  const EXPECT_NUM_EXTEND = 1;
+  // Say, we want to show 3 extended itineraries
+  const EXPECT_NUM_EXTEND = 3;
   const NUM_EXTEND = Math.min(EXPECT_NUM_EXTEND, itineraries.length);
 
+  // and 3 short itineraries
   const EXPECT_NUM_REST = 3;
   const NUM_REST = Math.min(EXPECT_NUM_REST, itineraries.length - NUM_EXTEND);
 

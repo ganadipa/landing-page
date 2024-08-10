@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -19,7 +20,7 @@ export default function PandooinDotCom() {
           {/* Floating */}
           <div
             id="floating-pandooin"
-            className="absolute flex max-lg:flex-col lg:justify-around items-center w-full gap-4"
+            className="absolute flex max-lg:flex-col lg:justify-around items-center w-full h-full gap-4 "
           >
             {/* Logo */}
             <Image
@@ -35,7 +36,9 @@ export default function PandooinDotCom() {
               <p className="font-semibold">
                 Want to see other destinations? Check us at our website
               </p>
-              <span className="underline font-extrabold">Pandooin.com</span>
+              <div className="underline font-extrabold inline-flex">
+                Pandooin.com <ArrowUpRight size={24} className="w-6 h-6" />
+              </div>
             </div>
           </div>
         </div>
